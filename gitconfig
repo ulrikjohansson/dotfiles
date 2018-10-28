@@ -1,14 +1,14 @@
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 [alias]
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	st = status
+	lg-outgoing= "!git lg @{u}.."
+	lg-incoming= "!git lg ..@{u}"
+	st = status -sb
 	co = checkout
 	ff = pull --ff-only
 	grep = grep -E
-	lg-outgoing= "!git lg @{u}.."
-	lg-incoming= "!git lg ..@{u}"
 	diff-outgoing = "!git diff --boundary @{u}..."
 	diff-incoming = "!git diff --boundary ...@{u}"
 	wdiff = diff --word-diff=color --word-diff-regex=.
