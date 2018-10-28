@@ -15,9 +15,9 @@
 	diffstat = diff --stat
 [color]
 	ui = auto
+[push]
+	default = upstream
 [diff]
 	tool = vimdiff
 [color "diff"]
 	whitespace = red reverse
-[hub]
-	host = github.schibsted.io
